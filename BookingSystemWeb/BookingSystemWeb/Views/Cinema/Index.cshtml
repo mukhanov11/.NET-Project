@@ -4,8 +4,10 @@
 <thead>
 <tr>
     <th scope="col">Cinema ID</th>
-    <th scope="col">Description</th>
-    <th scope="col">Rows count</th>
+    <th scope="col">Name</th>
+    <th scope="col">Rows Count</th>   
+    <!--<th scope="col">Reserved Places</th>
+    <th scope="col">Revenue</th>-->
 </tr>
 </thead>
     <tbody>
@@ -21,6 +23,12 @@
                 <td>
                     @m.GetRows().Count
                 </td>
+                <!--<td>
+                    @m.ReservedPlaces
+                </td>
+                <td>
+                    @m.GetRevenue()
+                </td>-->
             </tr>
         }
     </tbody>
@@ -39,8 +47,6 @@
         <input name="RowCount"
                placeholder="Rows count"
                type="number" />
-        
-        //Button
         <input type="submit" 
                value="Add cinema" />
     </div>

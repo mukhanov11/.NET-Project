@@ -6,7 +6,7 @@
        <tr>
               <th scope="col">Movie name</th>
               <th scope="col">Movie date</th>
-              <th scope="col">Cinema id</th>
+              <th scope="col">Cinema Name</th>
        </tr>
        </thead>
        <tbody>
@@ -20,7 +20,7 @@
                             @m.GetMovieDate()
                      </td>
                      <td>
-                            @m.GetCinema().GetCinemaId()
+                            @m.GetCinema().description
                      </td>
               </tr>
        }
@@ -37,9 +37,15 @@
                placeholder="Movie Date"
                type="date"
                value="" />
-        <input name="CinemaId"
-               placeholder="Cinema Id"
-               type="number" />
+
+        <select name="CinemaName">
+
+            @foreach(var name in Storage.cinemas) {
+                <option value="@name.description">@name.description</option>
+            }
+            
+        </select>
+
         <input type="submit" 
                value="Add movied" />
     </div>
