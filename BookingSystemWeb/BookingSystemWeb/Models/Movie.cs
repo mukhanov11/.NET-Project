@@ -5,9 +5,9 @@ namespace BookingSystemWeb.Models
 {
     public class Movie
     {
-        private String movieName;
+        public String movieName;
         private String movieDate;
-        private Cinema cinema;
+        public Cinema cinema;
         private List<Seat> seats;
         private int freeSeats;
 

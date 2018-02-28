@@ -50,6 +50,7 @@ namespace BookingSystemWeb.Models
                 movie.GetCinema().GetRows()[selectedRow].GetSeats()[selectedSeat].Reserve();
                 SetRowNumber(selectedRow);
                 SetSeatNumber(selectedSeat);
+                movie.cinema.ReservedPlaces += 1;
                 return true;
             }
         }

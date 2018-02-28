@@ -6,13 +6,16 @@ namespace BookingSystemWeb.Models
 {
     public class Cinema
     {
-        private int cinemaId;
-        private String description;
+        public int cinemaId;
+        public String description;
         private int rowCount;
         private List<Row> rows;
 
+        public int ReservedPlaces { get; set; }
+
         public Cinema(int cinemaId, String description)
         {
+            this.ReservedPlaces = 0;
             this.description = description;
             this.cinemaId = cinemaId;
             rows = new List<Row>();
@@ -41,6 +44,8 @@ namespace BookingSystemWeb.Models
         {
             return cinemaId;
         }
+
+
 
         public void PrintSeatPlan()
         {
@@ -112,20 +117,16 @@ namespace BookingSystemWeb.Models
 
             return cnt * 8;
         }
+
+        public int GetRevenue() 
+        {
+            return ReservedPlaces * 8;
+        }
         
 
         public override String ToString()
         {
-            int cnt = 0;
-
-            foreach (Row row in this.rows) {
-                for (int i = 0; i < row.GetSeats().Count; i++)
-                {
-                    if (row.GetSeats()[i].GetReservationStatus()) cnt++;
-                }
-            }
-
-            return this.description + ":\n" + "Amount of bookings: " + cnt + "\nTotal revenue from selled tickets: " + (cnt * 8);
+            return this.description + ":\n" + "Amount of bookings: " + ReservedPlaces + "\nTotal revenue from selled tickets: " + (GetRevenue());
         }
 
     }
