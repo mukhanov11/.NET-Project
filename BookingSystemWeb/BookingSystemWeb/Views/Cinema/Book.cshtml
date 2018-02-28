@@ -1,0 +1,53 @@
+﻿@model List<Booking>
+
+<table class="table">
+       <thead>
+       <tr>
+              <th scope="col">Customer name</th>
+              <th scope="col">Customer surname</th>
+              <th scope="col">Cinema id</th>
+       </tr>
+       </thead>
+       <tbody>
+       @foreach (var m in Model)
+       {
+              <tr>
+                     <td>
+                            @m.GetCostumer().GetName()
+                     </td>
+                     <td>
+                            @m.GetCostumer().GetSurname()
+                     </td>
+              </tr>
+       }
+       </tbody>
+</table>
+
+<form method="post">
+    <div>
+        <input name="ClientName"
+               placeholder="Client Name"
+               type="text"
+               value=""/>
+
+        <input name="ClientSurname"
+               placeholder="Client Surname"
+               type="text"
+               value=""/>
+
+        <input name="MovieId"
+               placeholder="Movie Id"
+               type="number"/>
+
+        <input name="RowNum"
+               placeholder="Row Number"
+               type="number"/>
+
+        <input name="SeatNum"
+               placeholder="Seat Number"
+               type="number"/>
+
+        <input type="submit"
+               value="Add booking"/>
+    </div>
+</form>

@@ -1,0 +1,46 @@
+﻿@model List<Movie>
+
+
+<table class="table">
+       <thead>
+       <tr>
+              <th scope="col">Movie name</th>
+              <th scope="col">Movie date</th>
+              <th scope="col">Cinema id</th>
+       </tr>
+       </thead>
+       <tbody>
+       @foreach (var m in Model)
+       {
+              <tr>
+                     <td>
+                            @m.GetMovieName()
+                     </td>
+                     <td>
+                            @m.GetMovieDate()
+                     </td>
+                     <td>
+                            @m.GetCinema().GetCinemaId()
+                     </td>
+              </tr>
+       }
+       </tbody>
+</table>
+
+<form method="post">
+    <div>
+        <input name="MovieName"
+               placeholder="Movie Name" 
+               type="text" 
+               value="" />
+        <input name="MovieDate"
+               placeholder="Movie Date"
+               type="date"
+               value="" />
+        <input name="CinemaId"
+               placeholder="Cinema Id"
+               type="number" />
+        <input type="submit" 
+               value="Add movied" />
+    </div>
+</form>

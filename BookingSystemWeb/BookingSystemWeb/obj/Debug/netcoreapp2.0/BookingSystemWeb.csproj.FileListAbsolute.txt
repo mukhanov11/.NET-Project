@@ -1,0 +1,10 @@
+C:\Users\Artur\Desktop\BookingWebSystem\BookingSystemWeb\BookingSystemWeb\bin\Debug\netcoreapp2.0\BookingSystemWeb.deps.json
+C:\Users\Artur\Desktop\BookingWebSystem\BookingSystemWeb\BookingSystemWeb\bin\Debug\netcoreapp2.0\BookingSystemWeb.runtimeconfig.json
+C:\Users\Artur\Desktop\BookingWebSystem\BookingSystemWeb\BookingSystemWeb\bin\Debug\netcoreapp2.0\BookingSystemWeb.runtimeconfig.dev.json
+C:\Users\Artur\Desktop\BookingWebSystem\BookingSystemWeb\BookingSystemWeb\bin\Debug\netcoreapp2.0\BookingSystemWeb.dll
+C:\Users\Artur\Desktop\BookingWebSystem\BookingSystemWeb\BookingSystemWeb\bin\Debug\netcoreapp2.0\BookingSystemWeb.pdb
+C:\Users\Artur\Desktop\BookingWebSystem\BookingSystemWeb\BookingSystemWeb\obj\Debug\netcoreapp2.0\BookingSystemWeb.csproj.CoreCompileInputs.cache
+C:\Users\Artur\Desktop\BookingWebSystem\BookingSystemWeb\BookingSystemWeb\obj\Debug\netcoreapp2.0\BookingSystemWeb.AssemblyInfoInputs.cache
+C:\Users\Artur\Desktop\BookingWebSystem\BookingSystemWeb\BookingSystemWeb\obj\Debug\netcoreapp2.0\BookingSystemWeb.AssemblyInfo.cs
+C:\Users\Artur\Desktop\BookingWebSystem\BookingSystemWeb\BookingSystemWeb\obj\Debug\netcoreapp2.0\BookingSystemWeb.dll
+C:\Users\Artur\Desktop\BookingWebSystem\BookingSystemWeb\BookingSystemWeb\obj\Debug\netcoreapp2.0\BookingSystemWeb.pdb

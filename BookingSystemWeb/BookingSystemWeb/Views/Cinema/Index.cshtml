@@ -1,0 +1,47 @@
+﻿@model List<Cinema>
+
+<table class="table">
+<thead>
+<tr>
+    <th scope="col">Cinema ID</th>
+    <th scope="col">Description</th>
+    <th scope="col">Rows count</th>
+</tr>
+</thead>
+    <tbody>
+        @foreach (var m in Model)
+        {
+            <tr>
+                <td>
+                    @m.GetCinemaId()
+                </td>
+                <td>
+                    @m.GetDescription()
+                </td>
+                <td>
+                    @m.GetRows().Count
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<form method="post">
+    <div>
+        <input name="CinemaId"
+               placeholder="Cinema ID" 
+               type="number" 
+               value="" />
+        <input name="CinemaName"
+               placeholder="Cinema Name"
+               type="text"
+               value="" />
+        <input name="RowCount"
+               placeholder="Rows count"
+               type="number" />
+        
+        //Button
+        <input type="submit" 
+               value="Add cinema" />
+    </div>
+</form>
