@@ -39,7 +39,7 @@ namespace BookingSystemWeb.Controllers
         [HttpPost]
         public IActionResult Movie(MovieForm form)
         {
-            var cinema = repo.cinemas.Find(x => x.GetCinemaId().Equals(form.CinemaId));
+            var cinema = repo.cinemas.Find(x => x.description.Equals(form.CinemaName));
             repo.movies.Add(new Movie(form.MovieName, form.MovieDate, cinema));
             return View(repo.movies);
         }
@@ -54,7 +54,11 @@ namespace BookingSystemWeb.Controllers
         public IActionResult Book(BookForm form)
         {
             Customer c = new Customer(1, form.ClientName, form.ClientSurname);
-            repo.bookings.Add(new Booking(c, new Movie("ASD", "asd", new Cinema(1, "test"))));
+            //repo.bookings.Add(new Booking(c, new Movie("ASD", "asd", new Cinema(1, "test"))));
+
+            var cinema = repo.cinemas.Find(x => x.GetDescription().Equals(form.CinemaName));
+
+            repo.bookings.Add(new Booking(c, new Movie(form.MovieName, form.Date, cinema)));
 //            repo.bookings.Add();
             return View(repo.bookings);
         }
